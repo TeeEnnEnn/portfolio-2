@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { githubUrl } from '$lib/utils';
 	import { Badge } from '$lib/components/ui/badge/index.js';
 	import ExternalIcon from '$lib/assets/ExternalIcon.svelte';
 </script>
@@ -18,7 +19,7 @@
 	<div class=" flex items-center gap-4">
 		<a
 			class="flex transition-colors hover:text-blue-400"
-			href="https://github.com/TheophilusNenhanga"
+			href={githubUrl}
 			aria-label="github icon"
 			target="_blank"
 			rel="noopener noreferrer"
@@ -139,9 +140,7 @@
 				<h4
 					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
 				>
-					<a
-						class="inline-flex items-center justify-center"
-						href="https://github.com/TheophilusNenhanga/crux-lang"
+					<a class="inline-flex items-center justify-center" href="{githubUrl}/crux-lang"
 						>Crux Lang
 						<ExternalIcon />
 					</a>
@@ -204,9 +203,7 @@
 				<h4
 					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
 				>
-					<a
-						class="inline-flex items-center justify-center"
-						href="https://github.com/TheophilusNenhanga/flora-engine"
+					<a class="inline-flex items-center justify-center" href="{githubUrl}/flora-engine"
 						>Flora Engine <ExternalIcon /></a
 					>
 				</h4>
@@ -225,9 +222,8 @@
 				<h4
 					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
 				>
-					<a
-						href="https://github.com/TheophilusNenhanga/jelp"
-						class="inline-flex items-center justify-center">Jelp <ExternalIcon /></a
+					<a href="{githubUrl}/jelp" class="inline-flex items-center justify-center"
+						>Jelp <ExternalIcon /></a
 					>
 				</h4>
 				<p class="mb-3 text-sm text-gray-300">
@@ -282,7 +278,7 @@
 		</p>
 		<p class="text-sm">
 			The repository can be found <a
-				href="https://github.com/TheophilusNenhanga/portfolio-2"
+				href="{githubUrl}/portfolio-2"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-blue-400 hover:underline">here</a

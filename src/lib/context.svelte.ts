@@ -82,7 +82,7 @@ export const windows: WindowState[] = $state([
 		width: 400,
 		height: 600,
 		left: 560,
-		top: 270,
+		top: 70,
 		hasFocus: false,
 		lastLeft: 0,
 		lastTop: 0,

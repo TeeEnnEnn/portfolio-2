@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import { githubUrl } from '$lib/utils';
 
 	let { children } = $props();
 
@@ -17,10 +18,7 @@
 			addressRegion: 'Saskatchewan',
 			addressCountry: 'CA'
 		},
-		sameAs: [
-			'https://github.com/TheophilusNenhanga',
-			'https://www.linkedin.com/in/theophilus-nenhanga/'
-		],
+		sameAs: [githubUrl, 'https://www.linkedin.com/in/theophilus-nenhanga/'],
 		knowsAbout: [
 			'C',
 			'TypeScript',
