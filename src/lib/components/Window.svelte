@@ -31,7 +31,8 @@
 		inactiveWindowBorderColor,
 		titleBarColor,
 		titleBarTextColor,
-		isTopBarVisible
+		isTopBarVisible,
+		rightOffset
 	} from '$lib/context.svelte';
 	import TitleBarDot from './TitleBarDot.svelte';
 
@@ -91,7 +92,7 @@
 			}
 
 			if (newLeft + thisWindow.width > window.innerWidth) {
-				newLeft = window.innerWidth - thisWindow.width;
+				newLeft = window.innerWidth - thisWindow.width - rightOffset;
 			}
 
 			if (newTop + thisWindow.height > window.innerHeight - endTop) {
@@ -101,7 +102,8 @@
 			windows[id].left = newLeft;
 			windows[id].top = newTop;
 
-			if (windows[id].left === window.innerWidth - thisWindow.width) {
+			// -rightOffset for `right-2`
+			if (windows[id].left === window.innerWidth - thisWindow.width - rightOffset) {
 				console.log('You are at the right edge');
 			}
 
@@ -184,7 +186,7 @@
 </script>
 
 <div
-	class="absolute overflow-hidden rounded-md bg-gray-200"
+	class="absolute overflow-hidden bg-gray-200"
 	style="
 	width:{thisWindow.width}px;
 	height:{thisWindow.height}px;

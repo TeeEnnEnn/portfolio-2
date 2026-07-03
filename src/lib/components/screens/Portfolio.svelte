@@ -5,10 +5,11 @@
 </script>
 
 <article
-	class="flex h-full flex-col space-y-10 overflow-y-auto bg-gray-800 p-6 text-white select-none md:space-y-12"
+	class="flex h-full flex-col space-y-10 overflow-y-auto bg-dark-background p-6 text-white select-none md:space-y-12"
 >
-	<div class="space-y-2">
-		<h1 class="text-2xl font-semibold text-white">Theophilus Nenhanga</h1>
+	<div class="flex flex-col space-y-2">
+		<img class="h-48 w-48 self-center" src="favicon.svg" alt="TNN Logo" />
+		<h1 class="text-2xl font-semibold text-white">Theophilus Nyasha Nenhanga</h1>
 		<h2 class="text-lg font-medium text-gray-300">Full Stack Developer</h2>
 		<p class="text-sm text-gray-400">
 			I build with performance in mind to be kind to machines, and with usability in mind to be kind
@@ -239,7 +240,7 @@
 	</section>
 
 	<section class="space-y-4">
-		<h3 class="border-b border-gray-600 pb-2 text-lg font-medium text-white">Bye Bye</h3>
+		<h3 class="border-b border-gray-600 pb-2 text-lg font-medium text-white">Bye</h3>
 		<p class="inline-flex flex-wrap items-center text-sm">
 			This website was built with &nbsp;<a
 				href="https://svelte.dev/"

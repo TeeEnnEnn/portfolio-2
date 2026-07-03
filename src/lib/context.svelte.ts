@@ -4,18 +4,35 @@ import Portfolio from './components/screens/Portfolio.svelte';
 import Settings from './components/screens/Settings.svelte';
 import PortfolioIcon from './assets/portfolio.svg';
 import SettingsIcon from './assets/settings.svg';
+import Resume from './components/screens/Resume.svelte';
+import ResumeIcon from './assets/resume.svg';
 
 export const showTitles = new PersistedState('showTitles', 'true');
 export const windowControlStyle = new PersistedState('windowControlStyle', 'windows');
 export const windowControlPosition = new PersistedState('windowControlPosition', 'right');
-export const activeWindowBorderColor = new PersistedState('activeWindowBorderColor', '#0078d4');
+export const activeWindowBorderColor = new PersistedState('activeWindowBorderColor', '#FF5C33');
 export const activeWindowBorderWidth = new PersistedState('activeWindowBorderWidth', '2px');
 export const inactiveWindowBorderColor = new PersistedState('inactiveWindowBorderColor', '#ccc');
 export const inactiveWindowBorderWidth = new PersistedState('inactiveWindowBorderWidth', '2px');
-export const titleBarColor = new PersistedState('titleBarColor', '#6a7282');
+export const titleBarColor = new PersistedState('titleBarColor', '#272838');
 export const titleBarTextColor = new PersistedState('titleBarTextColor', '#fff');
 export const showTime = new PersistedState('showTime', 'true');
 export const showDate = new PersistedState('showDate', 'true');
+
+export function resetAllSettings() {
+	showTitles.current = 'true';
+	windowControlStyle.current = 'windows';
+	windowControlPosition.current = 'right';
+	showTime.current = 'true';
+	showDate.current = 'true';
+	activeWindowBorderColor.current = '#FF5C33';
+	activeWindowBorderWidth.current = '2px';
+	inactiveWindowBorderColor.current = '#ccc';
+	inactiveWindowBorderWidth.current = '2px';
+	titleBarColor.current = '#272838';
+	titleBarTextColor.current = '#fff';
+}
+
 export let windowMaximized = false;
 export const startTop = 24;
 export const endTop = 56;
@@ -33,6 +50,8 @@ export const baseTop = 100;
 
 export const minWidth = 200;
 export const minHeight = 100;
+
+export const rightOffset = 16;
 
 export type WindowState = {
 	zIndex: number;
@@ -88,6 +107,24 @@ export const windows: WindowState[] = $state([
 		lastTop: 0,
 		lastWidth: 0,
 		lastHeight: 0,
+		lastState: 'closed'
+	},
+	{
+		zIndex: 0,
+		openState: 'closed',
+		name: 'Resume',
+		id: 2,
+		icon: ResumeIcon,
+		component: Resume,
+		width: 400,
+		height: 200,
+		left: 50,
+		top: 70,
+		hasFocus: false,
+		lastLeft: 50,
+		lastTop: 70,
+		lastWidth: 500,
+		lastHeight: 275,
 		lastState: 'closed'
 	}
 ]);
@@ -155,10 +192,12 @@ export function windowClose(id: number) {
 
 export function windowOpen(id: number) {
 	windows[id].openState = 'open';
-	windows[id].left = baseLeft;
-	windows[id].top = baseTop;
-	windows[id].width = baseWidth;
-	windows[id].height = baseHeight;
+	windows[id].left = windows[id].lastLeft == 0 ? baseLeft : windows[id].lastLeft;
+	windows[id].top = windows[id].lastTop == 0 ? baseTop : windows[id].lastTop;
+	windows[id].width = windows[id].lastWidth == 0 ? baseWidth : windows[id].lastWidth;
+	windows[id].height = windows[id].lastHeight == 0 ? baseHeight : windows[id].lastHeight;
+	// give focus to the window we just opened
+	setFocus(id);
 }
 
 export function windowRestore(id: number) {

@@ -4,7 +4,7 @@
 	import Topbar from '$lib/components/Topbar.svelte';
 	import Window from '$lib/components/Window.svelte';
 	import DesktopIcon from '$lib/components/DesktopIcon.svelte';
-	import Wall1 from '$lib/assets/wall2.webp';
+	import wallpaper from '$lib/assets/wallpaper.webp';
 	import { windows, windowOpen, setFocus } from '$lib/context.svelte';
 	import { fly } from 'svelte/transition';
 
@@ -18,9 +18,9 @@
 
 <main class="relative hidden h-screen max-h-screen overflow-hidden lg:block">
 	<h1 class="sr-only">Theophilus Nenhanga - Full Stack Developer</h1>
-	<div class="absolute inset-0 bg-blue-400 blur-xs" style="z-index: 0;">
+	<div class="absolute inset-0 bg-blue-400 blur-md brightness-50" style="z-index: 0;">
 		<img
-			src={Wall1}
+			src={wallpaper}
 			alt="Desktop Wallpaper"
 			class="pointer-events-none h-full w-full object-cover"
 		/>
@@ -35,7 +35,7 @@
 		{/each}
 	</div>
 
-	<div class="absolute inset-0" style="z-index: 10; pointer-events: none;">
+	<div class="absolute inset-0 right-2 left-2" style="z-index: 10; pointer-events: none;">
 		{#each windows as w (w.id)}
 			{#if w.openState === 'open' || w.openState === 'maximized'}
 				<div
