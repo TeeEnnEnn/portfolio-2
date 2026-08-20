@@ -218,24 +218,6 @@
 					<Badge variant="outline" class="border-gray-600 text-gray-400">UI Framework</Badge>
 				</div>
 			</div>
-
-			<div>
-				<h4
-					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
-				>
-					<a href="{githubUrl}/jelp" class="inline-flex items-center justify-center"
-						>Jelp <ExternalIcon /></a
-					>
-				</h4>
-				<p class="mb-3 text-sm text-gray-300">
-					An interactive learning platform designed to make learning Japanese easy.
-				</p>
-				<div class="flex flex-wrap gap-2">
-					<Badge>TypeScript</Badge>
-					<Badge>Svelte</Badge>
-					<Badge variant="outline" class="border-gray-600 text-gray-400">Learning Platform</Badge>
-				</div>
-			</div>
 		</div>
 	</section>
 

@@ -87,11 +87,11 @@
 				newTop = 0;
 			}
 
-			if ((showDate.current == 'true' || showTime.current == 'true') && newTop < startTop) {
+			if ((showDate.current === 'true' || showTime.current === 'true') && newTop < startTop) {
 				newTop = startTop;
 			}
 
-			if (newLeft + thisWindow.width > window.innerWidth) {
+			if (newLeft + thisWindow.width > window.innerWidth - rightOffset) {
 				newLeft = window.innerWidth - thisWindow.width - rightOffset;
 			}
 
@@ -104,21 +104,21 @@
 
 			// -rightOffset for `right-2`
 			if (windows[id].left === window.innerWidth - thisWindow.width - rightOffset) {
-				console.log('You are at the right edge');
+				// console.log('You are at the right edge');
 			}
 
 			if (windows[id].top === window.innerHeight - thisWindow.height - endTop) {
-				console.log('You are at the bottom edge');
+				// console.log('You are at the bottom edge');
 			}
 
 			if (windows[id].left === 0) {
-				console.log('You are at the left edge');
+				// console.log('You are at the left edge');
 			}
 
 			if (isTopBarVisible() && windows[id].top === topBarHeight) {
-				console.log('You are at the top edge with a visible top bar');
-			} else if (!isTopBarVisible() && windows[id].top == 0) {
-				console.log('You are at the top edge with a hidden top bar');
+				// console.log('You are at the top edge with a visible top bar');
+			} else if (!isTopBarVisible() && windows[id].top === 0) {
+				// console.log('You are at the top edge with a hidden top bar');
 			}
 		}
 
@@ -139,8 +139,8 @@
 				newHeight = minHeight;
 			}
 
-			if (newWidth + thisWindow.left > window.innerWidth) {
-				newWidth = window.innerWidth - thisWindow.left;
+			if (newWidth + thisWindow.left > window.innerWidth - rightOffset) {
+				newWidth = window.innerWidth - thisWindow.left - rightOffset;
 			}
 
 			if (newHeight + thisWindow.top > window.innerHeight - endTop) {
