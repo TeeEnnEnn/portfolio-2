@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Monitor npm packages (Svelte, SvelteKit, adapters, plugins, etc.)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Optional: Group minor and patch updates to reduce PR noise
+    groups:
+      svelte-ecosystem:
+        patterns:
+          - "@sveltejs/*"
+          - "svelte"
+
+  # Optional: Monitor GitHub Actions if you use CI/CD workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
