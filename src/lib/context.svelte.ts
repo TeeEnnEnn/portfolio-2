@@ -192,10 +192,10 @@ export function windowClose(id: number) {
 
 export function windowOpen(id: number) {
 	windows[id].openState = 'open';
-	windows[id].left = windows[id].lastLeft == 0 ? baseLeft : windows[id].lastLeft;
-	windows[id].top = windows[id].lastTop == 0 ? baseTop : windows[id].lastTop;
-	windows[id].width = windows[id].lastWidth == 0 ? baseWidth : windows[id].lastWidth;
-	windows[id].height = windows[id].lastHeight == 0 ? baseHeight : windows[id].lastHeight;
+	windows[id].left = windows[id].lastLeft === 0 ? baseLeft : windows[id].lastLeft;
+	windows[id].top = windows[id].lastTop === 0 ? baseTop : windows[id].lastTop;
+	windows[id].width = windows[id].lastWidth === 0 ? baseWidth : windows[id].lastWidth;
+	windows[id].height = windows[id].lastHeight === 0 ? baseHeight : windows[id].lastHeight;
 	// give focus to the window we just opened
 	setFocus(id);
 }
