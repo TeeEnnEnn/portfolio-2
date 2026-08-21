@@ -1,0 +1,8 @@
+---
+title: TypeScript Rewrite
+date: 2026-08-20
+description: Rewriting a service from Python to TypeScript, what could go wrong?
+tags: [Python, TypeScript]
+---
+
+This is test content
