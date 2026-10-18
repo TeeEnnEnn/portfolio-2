@@ -33,7 +33,7 @@
 		titleBarTextColor,
 		isTopBarVisible,
 		rightOffset
-	} from '$lib/context.svelte';
+	} from '#lib/context.svelte.js';
 	import TitleBarDot from './TitleBarDot.svelte';
 
 	let thisWindow = $derived(windows[id]);

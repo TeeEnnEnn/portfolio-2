@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Portfolio from '$lib/components/screens/Portfolio.svelte';
-	import Taskbar from '$lib/components/Taskbar.svelte';
-	import Topbar from '$lib/components/Topbar.svelte';
-	import Window from '$lib/components/Window.svelte';
-	import DesktopIcon from '$lib/components/DesktopIcon.svelte';
-	import wallpaper from '$lib/assets/wallpaper.webp';
-	import { githubUrl } from '$lib/utils';
-	import { windows, windowOpen, setFocus } from '$lib/context.svelte';
+	import Portfolio from '#lib/components/screens/Portfolio.svelte';
+	import Taskbar from '#lib/components/Taskbar.svelte';
+	import Topbar from '#lib/components/Topbar.svelte';
+	import Window from '#lib/components/Window.svelte';
+	import DesktopIcon from '#lib/components/DesktopIcon.svelte';
+	import wallpaper from '#lib/assets/wallpaper.webp';
+	import { githubUrl } from '#lib/utils.js';
+	import { windows, windowOpen, setFocus } from '#lib/context.svelte.js';
 	import { fly } from 'svelte/transition';
 
 	const jsonLd = {

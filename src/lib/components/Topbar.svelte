@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { showDate, showTime } from '$lib/context.svelte';
+	import { showDate, showTime } from '#lib/context.svelte.js';
 	let time = $state(new Date().toLocaleTimeString());
 	let date = $state(new Date().toLocaleDateString());
 

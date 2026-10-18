@@ -12,7 +12,7 @@
 		titleBarColor,
 		titleBarTextColor,
 		resetAllSettings
-	} from '$lib/context.svelte';
+	} from '#lib/context.svelte.js';
 
 	const titlesContent = [
 		{ value: 'true', label: 'Show' },

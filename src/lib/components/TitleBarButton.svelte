@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { windowControlPosition } from '$lib/context.svelte';
+	import { windowControlPosition } from '#lib/context.svelte.js';
 	let {
 		type = 'normal',
 		isLast = false,

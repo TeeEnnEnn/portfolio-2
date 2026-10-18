@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { githubUrl } from '$lib/utils';
-	import { Badge } from '$lib/components/ui/badge/index.js';
-	import ExternalIcon from '$lib/assets/ExternalIcon.svelte';
+	import { githubUrl } from '#lib/utils.js';
+	import { Badge } from '#lib/components/ui/badge/index.js';
+	import ExternalIcon from '#lib/assets/ExternalIcon.svelte';
 </script>
 
 <article

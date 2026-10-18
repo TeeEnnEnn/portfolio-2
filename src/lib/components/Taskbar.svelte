@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { windows, windowOpen, windowMinimize, windowUnMinimize } from '$lib/context.svelte';
+	import { windows, windowOpen, windowMinimize, windowUnMinimize } from '#lib/context.svelte.js';
 
 	function makeRenderSVG(icon: string): string {
 		let prefixRemoved = icon.trim().replace('data:image/svg+xml,', '');

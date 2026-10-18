@@ -1,6 +1,6 @@
 # Portfolio-2
 
-This is my portfolio, built with SvelteKit. 
+This is my portfolio, built with SvelteKit.
 
 ## Design
 
@@ -8,7 +8,7 @@ The design of the portfolio is a desktop windows based operating system. The win
 
 ## Development
 
-After cloning the repository, you can install the dependencies with `npm install` or `yarn install`. Then, you can run the development server with `npm run dev` or `yarn dev`. 
+After cloning the repository, you can install the dependencies with `npm install`. Then, you can run the development server with `npm run dev`
 
 ## Bye Bye
 
