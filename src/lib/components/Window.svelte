@@ -286,7 +286,6 @@
 				{/if}
 				<TitleBarButton
 					type="destructive"
-					isLast={true}
 					onclick={() => {
 						windowClose(id);
 					}}

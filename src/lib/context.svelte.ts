@@ -1,4 +1,4 @@
-import { PersistedState } from 'runed';
+import { PersistedState } from './persisted-state.svelte';
 import type { Component } from 'svelte';
 import Portfolio from './components/screens/Portfolio.svelte';
 import Settings from './components/screens/Settings.svelte';
@@ -65,6 +65,7 @@ export type WindowState = {
 	left: number;
 	top: number;
 	hasFocus: boolean;
+	/* last** will be used when opening a window */
 	lastLeft: number;
 	lastTop: number;
 	lastWidth: number;
@@ -116,15 +117,15 @@ export const windows: WindowState[] = $state([
 		id: 2,
 		icon: ResumeIcon,
 		component: Resume,
-		width: 400,
-		height: 200,
+		width: 800,
+		height: 800,
 		left: 50,
 		top: 70,
 		hasFocus: false,
 		lastLeft: 50,
 		lastTop: 70,
-		lastWidth: 500,
-		lastHeight: 275,
+		lastWidth: 800,
+		lastHeight: 800,
 		lastState: 'closed'
 	}
 ]);

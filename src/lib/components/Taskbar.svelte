@@ -30,7 +30,9 @@
 			<div
 				class="flex flex-col items-center justify-center transition-all duration-100 group-active:scale-80"
 			>
+				<!-- the icon SVGs come from bundled assets and use currentColor, so they must be injected as inline SVG; there is no user input here -->
 				<div class="h-6 w-6 text-gray-200" aria-label={w.name + ' task bar icon'}>
+					<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 					{@html makeRenderSVG(w.icon)}
 				</div>
 				{#if (w.openState === 'open' || w.openState === 'maximized') && !w.hasFocus}

@@ -12,8 +12,9 @@
 		<h1 class="text-2xl font-semibold text-white">Theophilus Nyasha Nenhanga</h1>
 		<h2 class="text-lg font-medium text-gray-300">Full Stack Developer</h2>
 		<p class="text-sm text-gray-400">
-			I build with performance in mind to be kind to machines, and with usability in mind to be kind
-			to humans.
+			Full stack web development with SvelteKit, Express, and Postgres, and systems programming in
+			C. I build with performance in mind to be kind to machines, and with usability in mind to be
+			kind to humans.
 		</p>
 	</div>
 
@@ -23,7 +24,7 @@
 			href={githubUrl}
 			aria-label="github icon"
 			target="_blank"
-			rel="noopener noreferrer"
+			rel="noopener noreferrer external"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +64,7 @@
 		<div class="space-y-4">
 			<div>
 				<h4 class="text-base font-medium text-white">
-					Intern Web Developer
+					Intern Software Developer
 					<span class="text-gray-400"
 						>@ <a
 							href="https://zu.com"
@@ -76,16 +77,29 @@
 				<p class="mb-2 text-xs text-gray-400">September 2024 - September 2025</p>
 				<p class="mb-3 text-sm text-gray-300">
 					I contributed to feature development, bug fixes, and improvements for internal tools and
-					client-facing websites.
+					client-facing web applications.
 				</p>
 				<p class="mb-3 text-sm text-gray-300">
 					I also supported engineering initiatives, including:
 				</p>
 				<ul class="mb-3 list-inside list-disc text-sm text-gray-300">
+					<li>Implementing end-to-end tests with Cypress in AstroJS and Drupal based projects</li>
+					<li>
+						Implementing user onboarding flows and authentication with Symfony, interfacing with the
+						Auth0 REST API
+					</li>
 					<li>Defining security standards for Drupal authentication</li>
 					<li>Assisting with accessibility improvements to meet WCAG 2.1 AA standards</li>
-					<li>Building internal monitoring dashboards</li>
-					<li>Investigating emerging technologies (e.g. Drupal AI)</li>
+					<li>
+						Building internal monitoring dashboards to track team GitHub Actions runner metrics
+					</li>
+					<li>
+						Investigating emerging technologies (e.g. Drupal AI implementing RAG and custom
+						generative AI)
+					</li>
+					<li>
+						Authoring internal developer code style and client facing web application documentation
+					</li>
 				</ul>
 
 				<p class="mb-3 text-sm text-gray-300">The main projects I worked on were:</p>
@@ -129,8 +143,33 @@
 					<Badge>Symfony</Badge>
 					<Badge>Astro</Badge>
 					<Badge>Typescript</Badge>
+					<Badge>React</Badge>
+					<Badge>Python</Badge>
+					<Badge>GitHub Actions</Badge>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="space-y-4">
+		<h3 class="border-b border-gray-600 pb-2 text-lg font-medium text-white">Education</h3>
+		<div>
+			<h4 class="text-base font-medium text-white">
+				B.Sc. Computer Science
+				<span class="text-gray-400"
+					>@ <a
+						href="https://www.usask.ca/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-blue-400 hover:underline">University of Saskatchewan</a
+					></span
+				>
+			</h4>
+			<p class="mb-2 text-xs text-gray-400">June 2026</p>
+			<p class="text-sm text-gray-300">
+				Graduated with Great Distinction (average &gt; 80%) with a major in Computer Science and a
+				minor in Statistics.
+			</p>
 		</div>
 	</section>
 
@@ -141,13 +180,55 @@
 				<h4
 					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
 				>
-					<a class="inline-flex items-center justify-center" href="{githubUrl}/crux-lang"
+					<a
+						class="inline-flex items-center justify-center"
+						href="{githubUrl}/cover-voice"
+						rel="external">Cover Voice<ExternalIcon /></a
+					>
+				</h4>
+				<p class="mb-3 text-sm text-gray-300">
+					A reusable cover-letter template system with a custom template engine, self-hosted on a
+					managed VPS and accessible at
+					<a
+						href="https://cover-voice.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-blue-400 hover:underline">cover-voice.dev</a
+					>. Built to make writing cover letters easier.
+				</p>
+				<ul class="mb-3 list-inside list-disc text-sm text-gray-300">
+					<li>Single pass parser with contextual errors and usage tracking of entity relations.</li>
+					<li>OpenAPI compatible type safe REST API for secure frontend/backend communication.</li>
+					<li>
+						Server side PDF generation, replacing blocks and variables with custom
+						<code>{'{{ variable }}'}</code> and <code>{'{% block %}'}</code> syntax.
+					</li>
+					<li>Directed and reviewed AI-assisted implementation work.</li>
+				</ul>
+				<div class="flex flex-wrap gap-2">
+					<Badge>TypeScript</Badge>
+					<Badge>SvelteKit</Badge>
+					<Badge>Express</Badge>
+					<Badge>Postgres</Badge>
+					<Badge variant="outline" class="border-gray-600 text-gray-400">Web Application</Badge>
+				</div>
+			</div>
+
+			<div>
+				<h4
+					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
+				>
+					<a
+						class="inline-flex items-center justify-center"
+						href="{githubUrl}/crux-lang"
+						rel="external"
 						>Crux Lang
 						<ExternalIcon />
 					</a>
 				</h4>
 				<p class="mb-3 text-sm text-gray-300">
-					A custom programming language implementation based on Lox from <a
+					A gradually typed, embeddable, memory managed, interpreted programming language based on
+					Lox from <a
 						href="https://craftinginterpreters.com/"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -157,6 +238,15 @@
 				</p>
 				<p class="mb-3 text-sm text-gray-300">Some features of the language include:</p>
 				<ul class="mb-3 list-inside list-disc text-sm text-gray-300">
+					<li>Gradual typing with a stack based type system in a single pass compiler.</li>
+					<li>
+						Pooled object management for 36% faster complete program execution in memory intensive
+						applications.
+					</li>
+					<li>
+						Slab allocators for efficient memory allocation and deallocation, reducing system call
+						overhead.
+					</li>
 					<li>Object Oriented Programming with the use of structs and struct composition.</li>
 					<li>
 						Module system with <code>pub</code> keyword for public identifiers that other modules
@@ -166,10 +256,7 @@
 						<code>Result[T, E]</code> type for error handling, and <code>match</code> expressions for
 						pattern matching.
 					</li>
-					<li>
-						Mark and sweep garbage collector with object pooling as a runtime performance
-						optimization.
-					</li>
+					<li>Embedding interface based on Wren's embedding API.</li>
 				</ul>
 				<div class="flex flex-wrap gap-2">
 					<Badge>C</Badge>
@@ -204,18 +291,74 @@
 				<h4
 					class="group mb-1 text-base font-medium text-white transition-all duration-150 hover:text-blue-300 hover:underline"
 				>
-					<a class="inline-flex items-center justify-center" href="{githubUrl}/flora-engine"
-						>Flora Engine <ExternalIcon /></a
+					<a
+						class="inline-flex items-center justify-center"
+						href="{githubUrl}/flora-engine"
+						rel="external">Flora Engine <ExternalIcon /></a
 					>
 				</h4>
 				<p class="mb-3 text-sm text-gray-300">
-					A lightweight immediate mode rendering UI framework built on SDL3, providing a foundation
-					for creating performant Graphical User Interfaces in C.
+					A 2D UI rendering engine built on SDL3, focused on layout and event handling, providing a
+					foundation for creating performant Graphical User Interfaces in C.
 				</p>
 				<div class="flex flex-wrap gap-2">
 					<Badge>C</Badge>
 					<Badge>SDL3</Badge>
 					<Badge variant="outline" class="border-gray-600 text-gray-400">UI Framework</Badge>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="space-y-6">
+		<h3 class="border-b border-gray-600 pb-2 text-lg font-medium text-white">Hackathons</h3>
+		<div class="space-y-6">
+			<div>
+				<h4 class="mb-1 text-base font-medium text-white">Co-Labs Hackathon 2026</h4>
+				<p class="mb-2 text-xs text-gray-400">September 2026</p>
+				<p class="mb-3 text-sm text-gray-300">
+					Built a budgeting and personal finance forecasting web application with a full agentic
+					development workflow.
+				</p>
+				<ul class="mb-3 list-inside list-disc text-sm text-gray-300">
+					<li>Installable progressive web app with service worker and resource caching.</li>
+					<li>Full agentic development workflow with OpenCode and Claude Code.</li>
+				</ul>
+				<div class="flex flex-wrap gap-2">
+					<Badge>Express</Badge>
+					<Badge>PostgreSQL</Badge>
+					<Badge>SvelteKit</Badge>
+				</div>
+			</div>
+
+			<div>
+				<h4 class="mb-1 text-base font-medium text-white">Co-Labs Hackathon 2025</h4>
+				<p class="mb-2 text-xs text-gray-400">September 2025</p>
+				<p class="mb-3 text-sm text-gray-300">Built a home rental platform.</p>
+				<ul class="mb-3 list-inside list-disc text-sm text-gray-300">
+					<li>Implemented role-based access control.</li>
+					<li>Implemented maps integration with OpenStreetMap.</li>
+				</ul>
+				<div class="flex flex-wrap gap-2">
+					<Badge>Python</Badge>
+					<Badge>Flask</Badge>
+					<Badge>Supabase</Badge>
+					<Badge>SvelteKit</Badge>
+				</div>
+			</div>
+
+			<div>
+				<h4 class="mb-1 text-base font-medium text-white">Co-Labs Hackathon 2023</h4>
+				<p class="mb-2 text-xs text-gray-400">September 2023</p>
+				<p class="mb-3 text-sm text-gray-300">Built a watch party web application.</p>
+				<ul class="mb-3 list-inside list-disc text-sm text-gray-300">
+					<li>Implemented a real-time chat feature using WebSockets.</li>
+				</ul>
+				<div class="flex flex-wrap gap-2">
+					<Badge>Python</Badge>
+					<Badge>Flask</Badge>
+					<Badge>React</Badge>
+					<Badge>Socket.io</Badge>
 				</div>
 			</div>
 		</div>
@@ -241,29 +384,11 @@
 				>
 				&nbsp;Svelte</a
 			>
-			, and deployed on &nbsp;
+			, and can be found
 			<a
-				href="https://vercel.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="flex items-center justify-center text-blue-400 hover:underline"
-				><svg
-					data-testid="geist-icon"
-					height="16"
-					stroke-linejoin="round"
-					style="color:white"
-					viewBox="0 0 16 16"
-					width="16"
-					><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1L16 15H0L8 1Z" fill="currentColor"
-					></path></svg
-				>&nbsp;Vercel</a
-			>.
-		</p>
-		<p class="text-sm">
-			The repository can be found <a
 				href="{githubUrl}/portfolio-2"
 				target="_blank"
-				rel="noopener noreferrer"
+				rel="noopener noreferrer external"
 				class="text-blue-400 hover:underline">here</a
 			>
 		</p>
